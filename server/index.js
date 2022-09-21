@@ -12,6 +12,9 @@ app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/posts", postRoutes);
+app.get('/', (req,res)=>{
+  res.send("hello there from server")
+})
 
 // const CONNECTION_URL =
 //   "mongodb+srv://mateuszbyrtus:mateuszbyrtus123@cluster0.g4qtsrf.mongodb.net/?retryWrites=true&w=majority";
